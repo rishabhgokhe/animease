@@ -8,6 +8,6 @@ export default defineConfig({
     format: "es",
     name: "animease",
   },
-  external: ["react", "react-dom"],
+  external: ["react", "react-dom",'framer-motion'],
   plugins: [typescript({ tsconfig: "tsconfig.json" })],
 });

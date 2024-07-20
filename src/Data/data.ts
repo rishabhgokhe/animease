@@ -1,0 +1,1 @@
+export const intro = "NPM package for implementing animations easily"

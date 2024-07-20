@@ -1,24 +1,34 @@
 {
   "name": "animease",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "scripts": {
-    "build": "npx rollup -c"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhgokhe/animease"
   },
-  "keywords": [],
-  "author": "",
+  "homepage": "https://github.com/rishabhgokhe/animease#readme",
+  "scripts": {
+    "build": "npx rollup -c",
+    "start": "npx rollup -c -w"
+  },
+  "keywords": [
+    "animation"
+  ],
+  "author": "Rishabh Gokhe",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18",
+    "react-dom": "^18",
     "rollup": "^4.18.1",
     "tslib": "^2.6.3"
+  },
+  "dependencies": {
+    "framer-motion": "^11.2.12"
   }
 }

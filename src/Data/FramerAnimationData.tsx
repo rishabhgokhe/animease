@@ -16,6 +16,10 @@ export const MotionBlockData: MotionBlock[] = [
     component: motion.p,
   },
   {
+    variant: "a",
+    component: motion.a,
+  },
+  {
     variant: "ul",
     component: motion.ul,
   },

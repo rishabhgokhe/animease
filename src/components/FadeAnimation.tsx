@@ -8,6 +8,7 @@ interface FadeProps extends MotionProps {
   delay?: number;
   duration?: number;
   className?: string;
+  exitAnimation?: boolean;
 }
 
 const FadeAnimation: React.FC<FadeProps> = ({
@@ -18,6 +19,8 @@ const FadeAnimation: React.FC<FadeProps> = ({
   className,
   initial,
   animate,
+  exit,
+  exitAnimation = false,
 }) => {
   const motionComponent = MotionBlockData.find(
     (item) => item.variant === variant
@@ -31,6 +34,7 @@ const FadeAnimation: React.FC<FadeProps> = ({
   const properties = {
     initial: initial,
     animate: animate,
+    exit: exitAnimation ? exit : undefined,
     transition: { delay, duration },
     className,
   };
@@ -43,6 +47,7 @@ export const FadeUp: React.FC<FadeProps> = (props) => (
     {...props}
     initial={{ y: 20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
+    exit={{ y: -20, opacity: 0 }}
   />
 );
 
@@ -51,6 +56,7 @@ export const FadeDown: React.FC<FadeProps> = (props) => (
     {...props}
     initial={{ y: -20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
+    exit={{ y: 20, opacity: 0 }}
   />
 );
 
@@ -62,6 +68,8 @@ const FadeHorizontal: React.FC<FadeProps> = ({
   className,
   initial,
   animate,
+  exit,
+  exitAnimation,
 }) => {
   const motionComponent = MotionBlockData.find(
     (item) => item.variant === variant
@@ -75,6 +83,7 @@ const FadeHorizontal: React.FC<FadeProps> = ({
   const properties = {
     initial: initial,
     animate: animate,
+    exit: exitAnimation ? exit : undefined,
     transition: { delay, duration },
     className,
   };
@@ -87,6 +96,7 @@ export const FadeRight: React.FC<FadeProps> = (props) => (
     {...props}
     initial={{ x: -20, opacity: 0 }}
     animate={{ x: 0, opacity: 1 }}
+    exit={{ x: 20, opacity: 0 }}
   />
 );
 
@@ -95,5 +105,6 @@ export const FadeLeft: React.FC<FadeProps> = (props) => (
     {...props}
     initial={{ x: 20, opacity: 0 }}
     animate={{ x: 0, opacity: 1 }}
+    exit={{ x: -20, opacity: 0 }}
   />
 );

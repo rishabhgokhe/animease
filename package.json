@@ -1,6 +1,6 @@
 {
   "name": "animease",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Animease is a utility package designed to make using animation easier for React projects. It provides a simplified and more intuitive API for creating animations and transitions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

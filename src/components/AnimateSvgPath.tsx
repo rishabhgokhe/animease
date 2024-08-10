@@ -2,13 +2,13 @@ import * as React from "react";
 import { motion, SVGMotionProps } from "framer-motion";
 
 interface AnimateSvgPathProps extends SVGMotionProps<SVGPathElement> {
-  children: string;
+  d: string;
   duration?: number;
   fillColor?: string;
 }
 
 export const AnimateSvgPath: React.FC<AnimateSvgPathProps> = ({
-  children,
+  d,
   duration = 2,
   fillColor = "rgba(255, 255, 255, 0)",
   ...props
@@ -27,7 +27,7 @@ export const AnimateSvgPath: React.FC<AnimateSvgPathProps> = ({
   return (
     <motion.path
       {...props}
-      d={children}
+      d={d}
       variants={icon}
       initial="hidden"
       animate="visible"

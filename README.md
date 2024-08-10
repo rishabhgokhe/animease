@@ -26,20 +26,25 @@ npm install animease framer-motion
 ```
 >**Note** : `framer-motion` is a required dependency as Animease leverages it to provide its animation utilities.
 
+
 ## Usage
 
 ### Currently Available Animations
 
-#### Fade Animations
+#### Fade Animations - [Preview](https://codesandbox.io/embed/87ftmt?view=preview)
 
 1. **`FadeUp`** - Animates the component by fading it up after reload.
 2. **`FadeDown`** - Animates the component by fading it down after reload.
 3. **`FadeRight`** - Animates the component by fading it to the right after reload.
 4. **`FadeLeft`** - Animates the component by fading it to the left after reload.
 
-#### SVG Animations
+#### SVG Animations - [Preview](https://codesandbox.io/embed/sygz3x?view=preview&module=%2Fsrc%2FApp.tsx)
 
 1. **`AnimateSvgPath`** - Animates SVG paths to create smooth transitions.
+
+#### Parallax Animations - [Preview]()
+
+1. **`ParallaxImageAndText`** - Creates a parallax effect when scrolling between an image and any JSX div (text recommended). 
 
 ### Available Variants
 
@@ -57,16 +62,27 @@ The `FadeAnimations` component supports the following HTML element variants:
 
 The component accepts the following properties:
 
-- **`delay`**: *(Optional)* Specifies the delay before the animation starts, in seconds.
-- **`duration`**: *(Optional)* Sets the duration of the animation, in seconds. Defaults to `0.5` seconds if not provided.
+- **`delay`** (number) : *(Optional)* Specifies the delay before the animation starts, in seconds.
+- **`duration`** (number) : *(Optional)* Sets the duration of the animation, in seconds. Defaults to `0.5` seconds if not provided.
 - **`variant`**: Determines the HTML element to render. This must be one of the available variants (`div`, `p`, `a`, `ul`, `h1`, `h2`, `h3`).
+- **`children`** (React.ReactNode) : A JSX component div can be placed in between components like `Fade Animations` and `ParallaxImageAndText` as children.
+- **`exitAnimation`** (boolean) : *(Optional)* Whether to apply the exit animation. Defaults to `false`.
 
 ### Properties for SVG Animations
 
 The component accepts the following properties:
 
-- **`fillColor`**: *(Optional)* Specifies the color to fill the SVG path after animation.
-- **`duration`**: *(Optional)* Sets the duration of the animation, in seconds. Defaults to `2` seconds if not provided.
+- **`fillColor`** (string) : *(Optional)* Specifies the color to fill the SVG path after animation (e.g., `rgb(255,0,0)` or `#ff0000`).
+- **`d`** (string) : stores the path to be animated 
+- **`duration`** (number) : *(Optional)* Sets the duration of the animation, in seconds. Defaults to `2` seconds if not provided.
+
+### Properties for Parallax Animations
+
+The component accepts the following properties:
+
+- **`imageSrc`** (string) : Specifies the location of the image.
+- **`altText`** (string) : *(Optional)* Alternate description of the image.
+- **`children`** (React.ReactNode) : A JSX component div can be placed in between components like `Fade Animations` and `ParallaxImageAndText` as children.
 
 
 ### Example Usage
@@ -119,3 +135,5 @@ By adhering to these guidelines, you help maintain a well-organized and legally 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rishabhgokhe)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/rishabhgokhe)
 [![Instagram](https://img.shields.io/badge/Instagram-DD2A7B?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/rishabh_gokhe)
+
+**Email Address** : [rishabhgokhe20contact@gmail.com](mailto:rishabhgokhe20contact@gmail.com)

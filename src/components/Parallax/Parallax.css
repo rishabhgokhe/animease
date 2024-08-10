@@ -1,0 +1,92 @@
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--red);
+  --accent: var(--white);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.parallax-image-and-text-section {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  padding-left: 25px;
+  align-items: center;
+  position: relative;
+  perspective: 500px;
+  flex-direction: row;
+}
+
+.parallax-image-and-text-section .image {
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+  max-height: 90vh;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.parallax-image-and-text-section .text-div {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.parallax-image-and-text-section .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 100px;
+}
+
+/* Media Queries for Smartphones */
+@media (max-width: 768px) {
+  .parallax-image-and-text-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .parallax-image-and-text-section .text-div {
+    width: 90vw;
+    height: 50vw;
+    padding: 10px;
+  }
+
+  .parallax-image-and-text-section .image {
+    width: 100%;
+    height: 100%;
+  }
+}
